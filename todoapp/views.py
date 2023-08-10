@@ -22,7 +22,7 @@ def send_email(body):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
     server.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
-    # server.sendmail(from_email, [to_email], msg.as_string())
+    server.sendmail(from_email, [to_email], msg.as_string())
     server.quit()
     return redirect("/")
 

@@ -8,7 +8,7 @@ Create Todo
 <div class="header-bar">
     <a href="{% url 'list_todos' %}">&#8592; Back</a>
 </div>
-<div class="task-items-wrapper">
+<div class="task-items-wrapper"  style="padding: 10px 30px;">
 
     <form action="" method="post">{% csrf_token %}
         {{ form.as_p }}
