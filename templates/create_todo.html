@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create Todo
+{% endblock %}
+
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'list_todos' %}">&#8592; Back</a>
+</div>
+<div class="task-items-wrapper">
+
+    <form action="" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input class="button" type="submit" value="Create">
+    </form>
+</div>
+
+{% endblock %}

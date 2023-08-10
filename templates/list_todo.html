@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+View TODO
+{% endblock %}
+
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'list_todos' %}">&#8592; Back</a>
+</div>
+<div id="tasklist" class="task-items-wrapper" style="padding: 10px 30px;">
+
+    <p>Task is <b>{{todo.task}}</b></p>
+    <p>Completed is <b>{{todo.completed}}</b></p>
+</div>
+{% endblock %}

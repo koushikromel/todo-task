@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete Todo
+{% endblock title %}
+
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'list_todos' %}">&#8592; Back</a>
+</div>
+<div id="tasklist" class="task-items-wrapper"  style="padding: 10px 30px;">
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Are you sure do you want to delete <b><i>{{todo.task}}</i></b>?</p>
+        <input class="button" type="submit" value="Submit">
+    </form>
+</div>
+
+{% endblock %}
